@@ -1,0 +1,8 @@
+@forward "./searchBar/search";
+@forward "./body/main";
+@forward "./aside/aside";
+@forward "./body/header/shooting-stars";
+
+*{
+    scroll-behavior: smooth;
+}
