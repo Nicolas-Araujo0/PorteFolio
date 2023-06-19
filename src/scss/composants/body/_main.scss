@@ -37,6 +37,12 @@ body {
 
                 li {
                     width: 40%;
+
+                    &:first-child,
+                    &:nth-of-type(2){
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
                 }
 
                 li::before {
@@ -66,22 +72,20 @@ body {
                     right: auto;
                     left: auto;
                 }
-
-                a {
-                    width: 48%;
-                    vertical-align: middle;
-                    display: inline-block;
-                }
-
                 img {
                     width: 80%;
                     height: 100%;
                     margin: 0 auto;
                     border-radius: 5px;
                 }
-
-                div {
+                div:first-of-type{
+                    width: 48%;
+                    vertical-align: middle;
                     display: inline-block;
+                }
+                div:nth-of-type(2) {
+                    display: inline-flex;
+                    flex-direction: column;
                     vertical-align: middle;
                     row-gap: 20px;
                     width: 50%;

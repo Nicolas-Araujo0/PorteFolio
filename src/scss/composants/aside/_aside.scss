@@ -7,7 +7,7 @@ aside {
     height: 95%;
     background-color: bisque;
     border-radius: 5px;
-    box-shadow: 0 5px 2px 5px black;
+    box-shadow: 0 4px 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
 
     header {
@@ -68,13 +68,18 @@ aside {
 
         li {
             width: 20%;
+            height: 50px;
+            transition: .5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             img {
                 width: 80%;
                 height: 80%;
-                margin: 0 auto;
-                align-self: center;
+                margin: auto;
             }
+
             &:hover {
                 background-color: white;
                 border-radius: 50%;

@@ -1,0 +1,74 @@
+@use "../../asbtract" as *;
+
+.blur{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+
+
+    .close{
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    &-projRecap{
+        width: 75%;
+        height: 70%;
+        margin: 8% auto;
+        padding: 2em 1.5em;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .8);
+        color: black;
+
+        >div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        h3{
+            margin-bottom: 10px;
+        }
+        .img{
+            position: relative;
+            width: 59%;
+            height: 400px;
+
+            img:not(:nth-child(2)){
+                top: 47.5%;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                
+            }
+            img:nth-child(1){
+                left: $sideSpace;
+            }
+            img:nth-child(3){
+                right: $sideSpace;
+            }
+        }
+        .mainPic {
+            width: 230px;
+            height: 400px;
+            margin: 5% auto;
+            &.wider{
+                width: 400px;
+                height: 350px;
+            }
+        }
+        
+        p{
+            width: 40%;
+            display: inline-flex;
+            text-align: center;
+        }
+    }
+}
