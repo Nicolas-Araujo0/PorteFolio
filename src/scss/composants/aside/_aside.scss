@@ -1,3 +1,14 @@
+@use "../../asbtract/" as *;
+.menuToggle{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 12;
+    width: 45px;
+    height: 45px;
+    background: url("../../../../assets/img/ba.png");
+    background-size: contain;
+}
 aside {
     display: flex;
     flex-direction: column;
@@ -9,6 +20,7 @@ aside {
     border-radius: 5px;
     box-shadow: 0 4px 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
+
 
     header {
         padding: 2em;
@@ -26,7 +38,6 @@ aside {
                 border-radius: 50%;
             }
         }
-
     }
 
     nav {
@@ -86,5 +97,34 @@ aside {
             }
         }
     }
+    @include md{
+        display: none;
+        width: 45%;
+        height: 100%;
+        right: 0;
+        z-index: 11;
 
+        &.slideLeft{
+            animation: slideLeft 1s ease-out;
+        }
+        &.slideRight{
+            animation: slideRight 1s ease-out;
+        }
+    }
+    @include sm{
+        width: 70%;
+    }
+    @keyframes slideLeft {
+        0%{
+            right: -350px;
+        }
+        100%{
+            right: 0;
+        }
+    }
+    @keyframes slideRight {
+        100%{
+            right: -350px;
+        }
+    }
 }

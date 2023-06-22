@@ -7,8 +7,10 @@
         right-radius: 20px;
         left-radius: 20px;
     }
-
     overflow: hidden;
+    @include md {
+        border-radius: 0;
+    }
 }
 
 
@@ -111,5 +113,26 @@ $shooting-time: 3000ms; // star duration
     100% {
         transform: translateX(550px);
     }
+}  
+@include sm{
+    @keyframes shooting {
+        0% {
+            transform: translateX(0);
+        }
+    
+        100% {
+            transform: translateX(300px);
+        }
+    }    
 }
-
+@include md{
+    @keyframes shooting {
+        0% {
+            transform: translateX(0);
+        }
+    
+        100% {
+            transform: translateX(450px);
+        }
+    }    
+}

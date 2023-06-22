@@ -4,13 +4,17 @@ body {
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
+    
+    @include md {
+        padding: 0;
+    }
 }
 
 #wraper {
     width: 78%;
     height: fit-content;
     border-radius: 20px;
-    box-shadow: 0 2px 5px 5px $beige;
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.2);
     color: lightblue;
 
     #main {
@@ -34,12 +38,12 @@ body {
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
-
+                color: black;
                 li {
                     width: 40%;
 
                     &:first-child,
-                    &:nth-of-type(2){
+                    &:nth-of-type(2) {
                         font-size: 20px;
                         font-weight: 600;
                     }
@@ -53,10 +57,10 @@ body {
                     position: relative;
                     left: -30px;
                     top: 10px;
-
-
                 }
-
+                @include lg {
+                    justify-content: space-around;
+                }
             }
         }
 
@@ -72,27 +76,51 @@ body {
                     right: auto;
                     left: auto;
                 }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
                 img {
                     width: 80%;
                     height: 100%;
                     margin: 0 auto;
                     border-radius: 5px;
                 }
-                div:first-of-type{
+
+                div:first-of-type {
                     width: 48%;
                     vertical-align: middle;
                     display: inline-block;
+                    @include sm{
+                        width: 100%;
+                    }
                 }
+
                 div:nth-of-type(2) {
                     display: inline-flex;
                     flex-direction: column;
                     vertical-align: middle;
                     row-gap: 20px;
                     width: 50%;
+
+                    @include sm {
+                        width: 100%;
+                        text-align: center;
+                    }
                 }
 
                 &:last-child {
                     border: none;
+                }
+                @include sm{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+                }
+                @include lg{
+                    width: 100%;
+                    height: max-content;
                 }
             }
         }
@@ -114,5 +142,8 @@ body {
                 }
             }
         }
+    }
+    @include md{
+        width: 100%;;
     }
 }

@@ -8,13 +8,12 @@ $lightGrey : rgba(128, 128, 128, 0.200);
 
 $test: #04001b;
 
-$starOneT : 0%;
-$starOneR : 0%;
-$starOneDelay : 0s;
-$starTwoT : 0%;
-$starTwoR : 10%;
-$starTwoDelay : 10s;
-$starThreeR : 0%;
-$starThreeT : 15%;
-$starThreeDelay : 20s;
 $sideSpace : 15px;
+
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 1200px;
