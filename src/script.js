@@ -3,17 +3,48 @@ let index
 const minigames = [
     {
         src: "pong.webp",
+        text: "<h3>Pong</h3>",
+        /*
         text: "<b>(Pong)</b> <br> Une fonction récursive est appelé pour lancer le déplacement de la balle et requestAnimationFrame est utilisé pour animer celle-ci. Le déplacement de la balle se fait en vérifiant si la balle doit se déplacer gauche / droite / haut / bas, sa position X/Y sont par la suite incrémentés en fonction. Lorsque la balle rentre en contact avec l'une des raquettes ou l'une des bordures ses directions X/Y sont modifier (si la balle touche le haut de l'écran celle-ci va rebondir vers le bas , etc ). <br> Le déplacement des raquettes se fait lui en appuyant sur des touches prédéterminé ( Z/S - ↑/↓ ), cela modifie directement la position de celles-ci en. Lorsque la balle sort de l'écran, c'est considéré comme un but, le score du joueur ayant marqué augmente de 1 ( ou plus en fonction de l'avancement de la partie ), une animation est lancée et les éléments retourne à leur position de départ.",
+        */
         url: ""
     },
     {
         src: "tictac.webp",
+        text: `
+        <h4>Tic Tac Toe</h4>
+        <p></p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>JavaScript</li>
+            <li>html</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Une problématique</h5>
+        <p>Vérifier si l'un des joueurs a fait une ligne avec 3 cases possédant le même symbole sans écrire toutes les conditions à la mains.</p>
+        <h5>Solution</h5>
+        <p>Créez deux boucles pour vérifier </p>
+        
+        `,
         text: "<b>(Tic Tac Toe)</b><br>Lorsque l'une des cases est cliqués le contenu de celle-ci est vérifier, si elle est vide un symbole ( X / O ) apparait pour indiquer qu'elle est occupé par l'un des joueurs, si la case est occupé une alerte se lance est affiche un message indiquant que celle-ci est déjà occupé. Un booléen est utilisé pour faire joueur les joueurs de façon alterner. Le plateau est vérifié après que chaque joueur ai joué, la vérification est constitue d'une boucle qui vérifie les rangés et les diagonales pour voir si trois même symboles sont alignées, si c'est le cas alors que le joueur correspondant voit son socre augmenté de 1 et le plateau de jeu est réinitialisé.",
         url: ""
     },
     {
         src: "snake.webp",
-        text: "<b>(Snake)</b><br>Le terrain de jeux est représenté par un tableau à deux dimensions, chaque partie du 'serpent' à une position X/Y dans celui-ci (ainsi qu'un degré pour faire tourner les images constituant le serpent). RequestAnimationFrame est utilisé pour gérer l'animation du déplacement. Lorsqu'une touche de déplacement est enclenché ( ←/↓/→/↑ ) la direction de la tête du serpent va être modifier en conséquence. Lorsque que le serpent avance dans une direction la position des différentes parties est stocké et attribué à la partie suivante. ( ex : la tête est en position X:2 Y:5, si il se déplace vers la gauche alors la position de celle-ci passe à X:1 Y:5 la partie après la tête prend donc l'ancienne position de la tête X:2 Y:5, etc ).<br> Si le serpent touche une bordure il 'traverse' de l'autre côté ( si il sort par la gauche il apparaîtra a droite). Au bout de x animations des pommes vont apparaître permettant d'agrandir le serpent. A chaque déplacement une vérification est faite pour savoir si une pomme a était mangé aggrandissant le serpent au passage ou si celui-ci est entré en contact avec une des parties de son corps mettant fin à la partie.",
+        text: `
+        <h4>Snake</h4>
+        <p>Ce jeux a était codé en utilisant un tableau à deux dimensions pour gérer le plateau, les élèments dessus et les déplacements.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>JavaScript</li>
+            <li>html</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Une problématique</h5>
+        <p>La création du plateau était une problématique intéressante, au départ j'ai essayé de positionner les éléments en leur donnant une position absolue mais mais il y avait quelque soucis avec cette méthode.</p>
+        <h5>Solution</h5>
+        <p>La solution était d'utiliser un tableau à deux dimensions ( représentant un plateau ) pour avoir déjà chaque éléments placés et il restait just à les afficher.</p>
+        `,
         url: ""
     },
     {
@@ -119,7 +150,7 @@ clickedElement.forEach((element) => {
                         <img src="${url + imgSrc[index].src}" alt="" class="mainPic">
                         <img src="assets/img/right-arrow.webp" alt="" onclick='changeImgSrc(1)'>
                     </div>
-                    <p class='textContent'>${imgSrc[index].text}</p>
+                    <div class='textContent'>${imgSrc[index].text}</div>
                 </div>
             </div>`;
             mainSelect.append(newDiv)
@@ -143,7 +174,7 @@ let btnMenu = document.querySelector(".menuToggle")
 
 btnMenu.addEventListener("click", () => {
     const asideSelect = document.querySelector("aside")
-let timeout =1000;
+    let timeout = 1000;
 
     if (!blurElement) {
         let slideR = document.querySelector(".slideRight")

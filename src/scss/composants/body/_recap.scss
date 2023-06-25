@@ -43,6 +43,7 @@
             align-items: center;
             width: 48%;
             height: 500px;
+
             img:not(:nth-child(2)) {
                 width: 30px;
                 height: 30px;
@@ -68,41 +69,61 @@
             &.wider {
                 width: 400px;
                 height: 350px;
-                @include md{
+
+                @include md {
                     width: 250px;
                     height: 250px;
                 }
             }
+
             &.tetris {
                 width: 400px;
 
-                @include md{
+                @include md {
                     width: 250px;
                     height: 300px;
                 }
             }
-            
-            @include lg{
+
+            @include lg {
                 width: 250px;
                 height: 400px;
             }
         }
 
-        p {
+        .textContent {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
             width: 47%;
-            align-self: center;
-            text-align: center;
-            letter-spacing: 1;
 
-            @include lg{
+            h3 {
+                margin: 0
+            }
+
+            li {
+                float: left;
+
+                &:not(:last-of-type) {
+                    margin-right: 15px;
+                }
+
+                &:not(:first-of-type) {
+                    list-style-type: "- ";
+                }
+            }
+
+            @include lg {
                 font-size: 14px;
             }
         }
-        @include lg{
+
+        @include lg {
             width: 80%;
             height: 80%;
         }
-        @include md{
+
+        @include md {
             width: 95%;
             height: 85%;
         }
