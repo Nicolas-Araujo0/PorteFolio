@@ -222,7 +222,7 @@ const BackOffice = [
             <li>CSS</li>
         </ul>
         <h5>Récapitulatif</h5>
-        <p>Un formulaire comportant divers input est utilisés, quand le boutton "Ajouter utilisateur" est cliqué le formulaire est envoyé à une certaine URL, ceci-déclenche une méthode préparant une requête SQL créant un nouvel utilisateur en base de données en utilisant les informations récupérées sur les divers champs. Une notification est envoyé en fonction de si l'ajout a réussi ou non.</p>
+        <p>Un formulaire comportant divers input est utilisés, quand le boutton "Ajouter utilisateur" est cliqué le formulaire est envoyé à une certaine URL, ceci-déclenche une méthode préparant une requête SQL créant un nouvel utilisateur en base de données en utilisant les informations récupérées sur les divers champs. Une notification est envoyée en fonction de si l'ajout a réussi ou non.</p>
         <span>Github: <a href='https://github.com/Nicolas-Araujo0/projetMVC' target='_blank'>https://github.com/Nicolas-Araujo0/projetMVC</a></span>
         `
     },
@@ -274,10 +274,10 @@ function changeImgSrc(number) {
         }
     }
     let back = document.querySelector(".back")
-    if(url == "assets/img/back/"){
+    if (url == "assets/img/back/") {
         imgSelect.classList.add("back")
         console.log("hey")
-    } else if (back){
+    } else if (back) {
         imgSelect.classList.remove("back")
     }
 }
@@ -305,6 +305,11 @@ clickedElement.forEach((element) => {
             index = 0
             let newDiv = document.createElement("div");
             newDiv.classList.add("blur")
+            newDiv.addEventListener("click", (event) => {
+                if (event.target.className == "blur") {
+                    removeBlur()
+                }
+            })
             newDiv.innerHTML = `
             <div class="blur-projRecap">
                 <div>
@@ -325,24 +330,27 @@ clickedElement.forEach((element) => {
             if (wider) {
                 document.querySelector(".mainPic").classList.add("wider");
             }
-            if(url == "assets/img/back/"){
+            if (url == "assets/img/back/") {
                 document.querySelector(".mainPic").classList.add("back")
                 console.log("hey")
             }
             const buttonClose = document.querySelector(".close")
             buttonClose.addEventListener("click", () => {
                 if (blurElement) {
-                    const enlargedElement = document.querySelector(".blur")
-                    enlargedElement.remove();
-                    blurElement = !blurElement;
+                    removeBlur()
                 }
             })
         }
     });
 })
 
-let btnMenu = document.querySelector(".menuToggle")
 
+function removeBlur(){
+    const enlargedElement = document.querySelector(".blur")
+    enlargedElement.remove();
+    blurElement = !blurElement;
+}
+let btnMenu = document.querySelector(".menuToggle")
 btnMenu.addEventListener("click", () => {
     const asideSelect = document.querySelector("aside")
     let timeout = 1000;
@@ -359,10 +367,6 @@ btnMenu.addEventListener("click", () => {
         blurElement = true
         asideSelect.style.display = "block"
         asideSelect.classList.add("slideLeft")
-
-        setTimeout(() => {
-            console.log(asideSelect.offsetLeft)
-        }, timeout);
     } else {
         let slideL = document.querySelector(".slideLeft")
         if (slideL) {
@@ -376,5 +380,13 @@ btnMenu.addEventListener("click", () => {
             asideSelect.style.display = "none"
         }, timeout);
     }
-
 })
+
+
+/*
+let blurSelect = document.querySelector(".blur")
+if
+blurSelect.addEventListener("click",(event)=>{
+    console.log(event)
+})
+*/
