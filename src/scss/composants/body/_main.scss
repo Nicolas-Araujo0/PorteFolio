@@ -137,11 +137,21 @@ body {
 
                 img {
                     width: 45%;
+                    @include sm{
+                        width: 100%;
+                    }
                 }
 
                 p {
                     width: 50%;
                     align-self: center;
+                    @include sm{
+                        width: 100%;
+                    }
+                }
+                @include sm{
+                    flex-direction: column;
+                    row-gap: 10px;
                 }
             }
         }
