@@ -86,8 +86,11 @@ body {
                     height: 100%;
                     margin: 0 auto;
                     border-radius: 5px;
+                    &.thin{
+                        width: 40%;
+                    }
                 }
-
+                
                 div:first-of-type {
                     width: 48%;
                     vertical-align: middle;

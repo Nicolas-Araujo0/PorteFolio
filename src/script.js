@@ -2,89 +2,249 @@ let blurElement = false;
 let index
 const minigames = [
     {
-        src: "pong.webp",
-        text: "<h3>Pong</h3>",
-        /*
-        text: "<b>(Pong)</b> <br> Une fonction récursive est appelé pour lancer le déplacement de la balle et requestAnimationFrame est utilisé pour animer celle-ci. Le déplacement de la balle se fait en vérifiant si la balle doit se déplacer gauche / droite / haut / bas, sa position X/Y sont par la suite incrémentés en fonction. Lorsque la balle rentre en contact avec l'une des raquettes ou l'une des bordures ses directions X/Y sont modifier (si la balle touche le haut de l'écran celle-ci va rebondir vers le bas , etc ). <br> Le déplacement des raquettes se fait lui en appuyant sur des touches prédéterminé ( Z/S - ↑/↓ ), cela modifie directement la position de celles-ci en. Lorsque la balle sort de l'écran, c'est considéré comme un but, le score du joueur ayant marqué augmente de 1 ( ou plus en fonction de l'avancement de la partie ), une animation est lancée et les éléments retourne à leur position de départ.",
-        */
-        url: ""
-    },
-    {
         src: "tictac.webp",
         text: `
         <h4>Tic Tac Toe</h4>
-        <p></p>
+        <p>Il s'agit d'un jeu crée lors d'une semaine de compréhension du Javascript. Ma version contient une IA et une aide aux joueurs.</p>
         <h5>Techno utilisées</h5>
         <ul>
-            <li>JavaScript</li>
-            <li>html</li>
+            <li>Javascript</li>
+            <li>HTML</li>
             <li>CSS</li>
         </ul>
         <h5>Une problématique</h5>
         <p>Vérifier si l'un des joueurs a fait une ligne avec 3 cases possédant le même symbole sans écrire toutes les conditions à la mains.</p>
         <h5>Solution</h5>
-        <p>Créez deux boucles pour vérifier </p>
-        
-        `,
-        text: "<b>(Tic Tac Toe)</b><br>Lorsque l'une des cases est cliqués le contenu de celle-ci est vérifier, si elle est vide un symbole ( X / O ) apparait pour indiquer qu'elle est occupé par l'un des joueurs, si la case est occupé une alerte se lance est affiche un message indiquant que celle-ci est déjà occupé. Un booléen est utilisé pour faire joueur les joueurs de façon alterner. Le plateau est vérifié après que chaque joueur ai joué, la vérification est constitue d'une boucle qui vérifie les rangés et les diagonales pour voir si trois même symboles sont alignées, si c'est le cas alors que le joueur correspondant voit son socre augmenté de 1 et le plateau de jeu est réinitialisé.",
-        url: ""
+        <p>Créez deux boucles, une vérifiant les lignes et l'autres les colonnes en les incrémentants différament pour que chacune gère leur cas.</p>
+        <nav>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/Tic-tac-toe' target='_blank'>https://github.com/Nicolas-Araujo0/Tic-tac-toe</a></span>
+        <span>Projet: <a href='https://nicolas-araujo0.github.io/Tic-tac-toe/' target='_blank'>https://nicolas-araujo0.github.io/Tic-tac-toe/</a></span>
+        </nav>
+        `
     },
     {
         src: "snake.webp",
         text: `
         <h4>Snake</h4>
-        <p>Ce jeux a était codé en utilisant un tableau à deux dimensions pour gérer le plateau, les élèments dessus et les déplacements.</p>
+        <p>Ce jeu a été codé en utilisant un tableau à deux dimensions pour gérer le plateau, les élèments dessus et les déplacements.</p>
         <h5>Techno utilisées</h5>
         <ul>
-            <li>JavaScript</li>
-            <li>html</li>
+            <li>Javascript</li>
+            <li>HTML</li>
             <li>CSS</li>
         </ul>
         <h5>Une problématique</h5>
         <p>La création du plateau était une problématique intéressante, au départ j'ai essayé de positionner les éléments en leur donnant une position absolue mais mais il y avait quelque soucis avec cette méthode.</p>
         <h5>Solution</h5>
         <p>La solution était d'utiliser un tableau à deux dimensions ( représentant un plateau ) pour avoir déjà chaque éléments placés et il restait just à les afficher.</p>
+        <nav>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/Snake-projet-6-' target='_blank'>https://github.com/Nicolas-Araujo0/Snake-projet-6-</a></span>
+        <span>Projet: <a href='https://nicolas-araujo0.github.io/Snake-projet-6-/' target='_blank'>https://nicolas-araujo0.github.io/Snake-projet-6-/</a></span>
+        </nav>
+        `,
+    },
+    {
+        src: "tetris1.png",
+        text: `
+        <h4>Tetris</h4>
+        <p>Il s'agit d'un jeu crée lors d'une semaine de compréhension du Javascript. C'est une version basique du jeu.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>Javascript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Une problématique</h5>
+        <p>Faire en sorte de vérifier si une ligne est complète et faire descendre toutes les pièces se trouvant au dessus de celle-ci.</p>
+        <h5>Solution</h5>
+        <p>J'ai créé deux boucles que j'ai imbriqué, une pour vérifier chaque colonne et une autre pour vérifier chaque ligne. Si le contenu d'une case n'est pas vide alors j'incrémente une variable,elle est remise à 0 à chaque nouvelle ligne, si elle atteint 10 alors ça veut dire que la rangée est complète je peux donc utiliser l'index de la boucle qui vérifie les colonnes pour savoir laquelle je dois supprimer.</p>
+        <nav>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/Tetris' target='_blank'>https://github.com/Nicolas-Araujo0/Tetris</a></span>
+        <span>Projet: <a href='https://nicolas-araujo0.github.io/Tetris/' target='_blank'>https://nicolas-araujo0.github.io/Tetris/</a></span>
+        </nav>`
+    }
+]
+const frontOffice = [
+    {
+        src: "login.webp",
+        text: `
+        <h4>Connexion</h4>
+        <p>Il s'agit de la page de connexion designer en mobile first permettant à des employés d'acheter divers snacks.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>Javascript</li>
+            <li>Vue.js</li>
+            <li>npm</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Une problématique</h5>
+        <p>Faire la liaison entre le front et le back en envoyant les données de connexion.</p>
+        <h5>Solution</h5>
+        <p>Utiliser <b>Axios</b> depuis Vue.js pour l'envoi du formulaire de connexion du front au back, en lui passant comme argument l'adresse à utiliser et le contenu du formulaire. En fonction de la réponse récupéré l'utilisateur sera redirigé sur la page suivante ou non.</p>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/OnlineSnacks' target='_blank'>https://github.com/Nicolas-Araujo0/OnlineSnacks</a></span>
+        `,
+        url: "",
+        urlG: ""
+    },
+    {
+        src: "produits.webp",
+        text: `
+        <h4>Liste des produits</h4>
+        <p>Cette page concerne la liste des produits disponibles à l'achat par l'utilisateur, ils sont regroupés par genres.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>Javascript</li>
+            <li>Vue.js</li>
+            <li>npm</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Une problématique</h5>
+        <p>Afficher les produits en fonctions de leur catégories sans avoir de doublon.</p>
+        <h5>Solution</h5>
+        <p>Créer une boucle créant chaque catégorie et une seconde boucle imbriqué créant les différents articles de cette catégorie. Une fonction nécessitant l'une des catégorie de produits en paramètres est utilisé pour retourner la liste des articles filtrées par la fonction filter de Javascript selon la catégorie. Par la suite seuls les produits appartenant à cette catégorie sont dans la liste et sont donc crées côté utilisateur.</p>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/OnlineSnacks' target='_blank'>https://github.com/Nicolas-Araujo0/OnlineSnacks</a></span>
         `,
         url: ""
     },
     {
-        src: "tetris1.png",
-        text: "<b>(Tetris)</b><br>Le plateau est crée à partir d'un tableau à deux dimensions. Chaque nouvelle pièce apparait en haut du plateau et on chacune des parties différentes selon les pièces dont elle font parties, Il y a aussi une couleur associé à chaque pièces. Pour que les pièces descende leur position en Y est modifié à chaque animation. Les pièces descende automatiquement jusqu'a ce qu'elles rencontrent un obstacle (autre pièce ou bas du plateau). Une vérification est effectué après chaque déplacement pour voir si une ligne est complète si c'est le cas elle disparait ou si une pièce atteint le sommet de l'écran la partie s'arrête. Les pièces peuvent être tourné en appuyant sur ← →.",
-        url: ""
-    }]
-const frontOffice = [
-    {
-        src: "login.webp",
-        text: "La partie connexion du projet à était faite en créant un formulaire, une fois celui-ci validé une requête Axios va être éxecuter. Cela va envoyer les données à l'api servant de relation entre le front et black et  va faire appel à une méthode qui va vérifier si l'utilisateur à bien envoyé des données (avec isset pour vérfier si les champs ne sont pas vides et trim() pour enlever les possibles espaces en début et fin d'input.<br>  Une requête est ensuite faite avec SQL cherchant si il y a un utilisateur ayant un mail correspondant à celui entrée par l'utilisateur. Si oui alors le mot de passe envoyé par l'utilisateur est comparé avec celui de la base de donnée avec password_verify, si c'est le cas alors la connexion ce fait, les informations telles que le nom / prenom /solde de l'utilisateur sont stocké en localstorage pour les afficher sur le site et l'utilisateur est redirigé sur une autre page. Dans le cas ou les informations sont incorrectes il est renvoyé sur le formulaire de connexion.",
-        url: ""
-    },
-    {
-        src: "produits.webp",
-        text: "Pour cette partie, une requête à l'API est faite demandant la liste des produits et leurs informations est faite en arrivant sur la page. Une fois celle-ci obtenu, les produits sont filtrer et gardant uniquement sont ayant un stock supérieur à 0. Une boucle est ensuite exécuté sur le tableau contenant les produits triés pour crée un article avec leurs informations ( ici l'image du produit, le nom, le prix, une étoile selon si l'utilisateur a mit le produits en favoris). Les produits sont placés en utilisant grid.",
-        url: ""
-    },
-    {
-        src: "search.webp",
-        text: "La barre de recherche fait un tri sur la liste des produits disponibles en fonction des inputs de l'utilisateur. Grâce à vue.js l'affichage des produits se fait dynamiquement car la boucle générant les produits se base sur la même référence.",
-        url: ""
-    },
-    {
         src: "favored.webp",
-        text: "Au chargement de la page l'id de l'utilisateur est utilisé pour faire une requête SQL au back, comportant une jointure entre la table favoris et celle utilisateur pour récupérer seulement les produits en favoris pour l'utilisateur en question. Une fois récupéré le tableau est encodé avec json est renvoyé au front. Une boucle est ensuite utilisée sur le tableau d'objet qui a était reçu pour générer les articles en utilisant les propriétés de chaque objet ( image / nom / prix / favoris ).",
+        text: `
+        <h4>Favoris</h4>
+        <p>Cette page à pour but d'afficher les produits que l'utilisateur à mis en favoris.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>Javascript</li>
+            <li>Vue.js</li>
+            <li>npm</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Une problématique</h5>
+        <p>Permettre à l'utilisateur d'ajouter et de retirer les produits en favoris sans recharger la page.</p>
+        <h5>Solution</h5>
+        <p>Grâce à Vue.js, on peut définir une règle vérifiant si une propriété vaut une certaine valeur. L'image utilisé pour montrer si le produit est en favoris ou non est donc changé en fonction de la propriété fav de chaque produit. Une requête est ensuite faite en base de donnée pour soit enlever ou ajouter un certain produit en fonction de l'état de base.</p>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/OnlineSnacks' target='_blank'>https://github.com/Nicolas-Araujo0/OnlineSnacks</a></span>
+        `,
         url: ""
     },
     {
         src: "cart.webp",
-        text: "J'ai fait un cart pour le site en utilisant pinia. Au moment de cliquer sur un produits dans la liste celui-ci sera ajouter à un tableau d'objet crée par piñia pour l'afficher sur une page dédié. Dans la page du cart une boucle est faite sur le cart et celle-ci crée un article avec les propriétés de chaque objet ( image / nom / prix / favoris )",
+        text: `
+        <h4>Panier</h4>
+        <p>Il s'agit de la page affichant le panier de l'utilisateur.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>Javascript</li>
+            <li>Vue.js</li>
+            <li>npm</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Une problématique</h5>
+        <p>Garder en 'mémoire' les différents produits que l'utilisateur veut acheter pour les afficher sur la page comportant le panier.</p>
+        <h5>Solution</h5>
+        <p>Utilisation de Piñia pour créer un 'store' qu'il suffit d'importer sur chaque page pour les lier entre elles. J'ai ensuite crée une fonction pour ajouter un produit dans une variable contenant un tableau avec la fonction push de Javascript. Je peux par la suite récupérer les données de cette variable sur la page gérant l'affichage du panier. Si le panier est vide alors une image indiquant un panier vide pour prévenir l'utilisateur sera chargée.</p>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/OnlineSnacks' target='_blank'>https://github.com/Nicolas-Araujo0/OnlineSnacks</a></span>
+        `,
         url: ""
     },
     {
         src: "empty.webp",
-        text: "La page affichant le cart pouvant être accéder même lorsque celui-ci est vide, une image indiquant que le cart est vide est donc affichée pour l'indiquer à l'utilisateur.",
+        text: `
+        <h4>Panier vide</h4>
+        <p>Il s'agit de la page affichant le panier de l'utilisateur.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>Javascript</li>
+            <li>Vue.js</li>
+            <li>npm</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Une problématique</h5>
+        <p>Garder en 'mémoire' les différents produits que l'utilisateur veut acheter pour les afficher sur la page comportant le panier.</p>
+        <h5>Solution</h5>
+        <p>Utilisation de Piñia pour créer un 'store' qu'il suffit d'importer sur chaque page pour les lier entre elles. J'ai ensuite crée une fonction pour ajouter un produit dans une variable contenant un tableau avec la fonction push de Javascript. Je peux par la suite récupérer les données de cette variable sur la page gérant l'affichage du panier. Si le panier est vide alors une image indiquant un panier vide pour prévenir l'utilisateur sera chargée.</p>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/OnlineSnacks' target='_blank'>https://github.com/Nicolas-Araujo0/OnlineSnacks</a></span>
+        `,
         url: ""
     }
 ]
-const BackOffice = []
+const BackOffice = [
+    {
+        src: "user.webp",
+        text: `
+        <h4>Utilisateurs</h4>
+        <p>Il s'agit de la page affichant les divers utilisateurs enregistrés en base de donnés.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>PHP</li>
+            <li>Twig</li>
+            <li>Javascript</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Récapitulatif</h5>
+        <p>En arrivant sur cet URL une requête SQL est faite pour récupérer la liste des utilisateurs, celle-ci est passé en argument à un méthode en utilisant twig, cela permet ensuite de charger la vue correspondante et d'afficher le contenu passé en argument ici les différents utilisateurs.</p>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/projetMVC' target='_blank'>https://github.com/Nicolas-Araujo0/projetMVC</a></span>
+        `
+    },
+    {
+        src: "userModify.webp",
+        text: `
+        <h4>Modification de l'utilisateur</h4>
+        <p>En cliquant sur l'une des propriétés d'un des utilisateurs celle-ci peut être modifier.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>PHP</li>
+            <li>Twig</li>
+            <li>Javascript</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Une problématique</h5>
+        <p>Permettre la modification d'un seul champ de l'utilisateur, en évitant d'envoyer des données qui ne seront pas modifiées.</p>
+        <h5>Solution</h5>
+        <p>Lorsqu'un champ est cliqué, le contenu de l'input devient modifiable et un boutton permettant de valider apparaît. En utilisant des dataset on peut stocker certaines données voulu sur chaque input, ici l'id et l'utiliser dans une requête pour demander a modifier spécifiquement le chan pour l'utilisateur ciblé.</p>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/projetMVC' target='_blank'>https://github.com/Nicolas-Araujo0/projetMVC</a></span>
+        `
+    },
+    {
+        src: "addUser.webp",
+        text: `
+        <h4>Ajouter un utilisateur</h4>
+        <p>Cette page permet d'ajouter un utilisateur avec les informations nécessaires pour celui-ci.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>PHP</li>
+            <li>Twig</li>
+            <li>Javascript</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Récapitulatif</h5>
+        <p>Un formulaire comportant divers input est utilisés, quand le boutton "Ajouter utilisateur" est cliqué le formulaire est envoyé à une certaine URL, ceci-déclenche une méthode préparant une requête SQL créant un nouvel utilisateur en base de données en utilisant les informations récupérées sur les divers champs. Une notification est envoyé en fonction de si l'ajout a réussi ou non.</p>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/projetMVC' target='_blank'>https://github.com/Nicolas-Araujo0/projetMVC</a></span>
+        `
+    },
+    {
+        src: "restock.webp",
+        text: `
+        <h4>Restockage</h4>
+        <p>Cette page permet de restocker les produits disponibles en base de donnée.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>PHP</li>
+            <li>Twig</li>
+            <li>Javascript</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Récapitulatif</h5>
+        <p>Deux selecteurs sont disponibles, un pour choisir un produit, l'autre pour choisir la quanité à restocker. Une fois le boutton "Restocker" cliqué une requête, l'utilisateur est envoyé sur l'URL gérant le restock, cela prépare une requête SQL prenant en paramètre l'id du produit choisi, la quantité a restocker et cela est mis à jour en base de donnée.</p>
+        <span>Github: <a href='https://github.com/Nicolas-Araujo0/projetMVC' target='_blank'>https://github.com/Nicolas-Araujo0/projetMVC</a></span>
+        `
+    }
+]
+
 function changeImgSrc(number) {
     const imgSelect = document.querySelector(".mainPic");
     const textContent = document.querySelector(".textContent")
@@ -103,7 +263,7 @@ function changeImgSrc(number) {
     }
     imgSelect.src = url + imgSrc[index].src;
     textContent.innerHTML = imgSrc[index].text;
-    if (url == "assets/img/games/" && index == 3) {
+    if (url == "assets/img/games/" && index == 2) {
         imgSelect.classList.remove("wider")
         imgSelect.classList.add("tetris")
         wider = false;
@@ -112,6 +272,13 @@ function changeImgSrc(number) {
         if (imgSelect.classList.contains('tetris')) {
             imgSelect.classList.remove("tetris")
         }
+    }
+    let back = document.querySelector(".back")
+    if(url == "assets/img/back/"){
+        imgSelect.classList.add("back")
+        console.log("hey")
+    } else if (back){
+        imgSelect.classList.remove("back")
     }
 }
 let url;
@@ -157,6 +324,10 @@ clickedElement.forEach((element) => {
             blurElement = !blurElement;
             if (wider) {
                 document.querySelector(".mainPic").classList.add("wider");
+            }
+            if(url == "assets/img/back/"){
+                document.querySelector(".mainPic").classList.add("back")
+                console.log("hey")
             }
             const buttonClose = document.querySelector(".close")
             buttonClose.addEventListener("click", () => {
