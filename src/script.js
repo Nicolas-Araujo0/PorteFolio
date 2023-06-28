@@ -353,7 +353,7 @@ function removeBlur(){
 let btnMenu = document.querySelector(".menuToggle")
 btnMenu.addEventListener("click", () => {
     const asideSelect = document.querySelector("aside")
-    let timeout = 1000;
+    let timeout = 500;
 
     if (!blurElement) {
         let slideR = document.querySelector(".slideRight")
