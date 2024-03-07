@@ -4,7 +4,7 @@ body {
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
-    
+
     @include md {
         padding: 0;
     }
@@ -34,13 +34,13 @@ body {
         }
 
         &-competences {
-            div{
+            div {
                 display: flex;
                 justify-content: space-between;
                 width: 70%;
                 margin: 0 auto;
 
-                @include sm{
+                @include sm {
                     flex-direction: column;
                     row-gap: 1.5rem;
                     width: 90%;
@@ -49,14 +49,17 @@ body {
                     justify-content: baseline;
                 }
             }
+
             ul {
                 color: black;
+
                 li {
-                    &:first-child{
+                    &:first-child {
                         font-size: 20px;
                         font-weight: 600;
                     }
                 }
+
                 li:not(:first-of-type)::before {
                     display: block;
                     width: 20px;
@@ -91,16 +94,18 @@ body {
                     height: 100%;
                     margin: 0 auto;
                     border-radius: 5px;
-                    &.thin{
+
+                    &.thin {
                         width: 40%;
                     }
                 }
-                
+
                 div:first-of-type {
                     width: 48%;
                     vertical-align: middle;
                     display: inline-block;
-                    @include sm{
+
+                    @include sm {
                         width: 100%;
                     }
                 }
@@ -121,12 +126,14 @@ body {
                 &:last-child {
                     border: none;
                 }
-                @include sm{
+
+                @include sm {
                     display: flex;
                     flex-direction: column;
                     row-gap: 20px;
                 }
-                @include lg{
+
+                @include lg {
                     width: 100%;
                     height: max-content;
                 }
@@ -142,26 +149,44 @@ body {
 
                 img {
                     width: 45%;
-                    @include sm{
+
+                    @include sm {
                         width: 100%;
                     }
                 }
 
-                p {
+                div {
                     width: 50%;
-                    align-self: center;
-                    @include sm{
-                        width: 100%;
-                    }
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    row-gap: 1rem;
                 }
-                @include sm{
+
+                @include sm {
                     flex-direction: column;
                     row-gap: 10px;
                 }
             }
         }
     }
-    @include md{
-        width: 100%;;
+
+    @include md {
+        width: 100%;
+        ;
+    }
+}
+p {
+    line-height: 110%;
+}
+#additionalInfo{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    #pdf{
+        font-size: 18px;
+        width: fit-content;
+        color: blue;
+        text-decoration: underline;
     }
 }

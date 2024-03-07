@@ -47,6 +47,7 @@
 
         .img {
             display: flex;
+            justify-content: space-between;
             position: relative;
             align-items: center;
             width: 48%;
@@ -92,6 +93,26 @@
             &.wider {
                 width: 400px;
                 height: 350px;
+
+                @include md {
+                    width: 250px;
+                    height: 250px;
+                }
+
+            }
+            &.large {
+                width: 90%;
+                height: 90%;
+
+                @include md {
+                    width: 250px;
+                    height: 250px;
+                }
+
+            }
+            &.larger {
+                width: 100%;
+                height: 90%;
 
                 @include md {
                     width: 250px;

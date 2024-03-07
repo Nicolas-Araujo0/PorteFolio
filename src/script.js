@@ -244,6 +244,158 @@ const BackOffice = [
         `
     }
 ]
+const frontManga = [
+    {
+        src: "Accueil.webp",
+        text: `
+        <h4>Accueil</h4>
+        <p>Il s'agit de la page d'accueil lorsque l'utilisateur accède au site.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+        <li>Javascript</li>
+        <li>Vue.js</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        </ul>
+        <h5>Récapitulatif</h5>
+        <p>En arrivant sur cette URL, une fonction est appelée. Cette fonction effectue une requête à l'API liée aux back-ends pour récupérer la liste des mangas disponibles par lot. Ensuite, une boucle est utilisée avec les informations reçues pour afficher chaque manga avec ses informations.</p>
+
+        `
+    },
+    {
+        src: "Info.webp",
+        text: `
+        <h4>Informations complémentaires sur un manga</h4>
+        <p>En cliquant sur l'un des mangas des informations supplémentaires sur celui-ci sont affichées.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+        <li>Javascript</li>
+        <li>Vue.js</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        </ul>
+        <h5>Récapitulatif</h5>
+        <p>Lorsque l'utilisateur clique sur l'un des mangas, les informations le concernant seront affichées sur le côté. Si l'utilisateur accède au site depuis un mobile, il sera redirigé vers une nouvelle page contenant les informations du manga. Il est également possible pour l'utilisateur de attribuer une note et d'ajouter le manga à sa liste de lectures suivies..</p>
+        `
+    },
+    {
+        src: "Categorie.webp",
+        text: `
+        <h4>Trie par catégorie - recherche</h4>
+        <p>L'utilisateur peut faire une recherche d'un manga particulier avec son nom ou tout simplement rechercher un type de catégorie en particulier.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+        <li>Javascript</li>
+        <li>Vue.js</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        </ul>
+        <h5>Une problématique</h5>
+        <p>Afficher les diverses catégories recherchés par l'utilisateur en enlevant de la liste celle déjà présente.</p>
+        <h5>Solution</h5>
+        <p>Lorsque l'utilisateur clique sur une catégorie disponible dans le menu déroulant celle-ci, est ajouté dans un nouveau tableau afin d'être stockée. Ensuite, elle est retirée du menu déroulant. Les catégories ajoutées dans le nouveau tableau sont ensuite affichées séparement pour l'utilisateur.</p>
+        `
+    },
+    {
+        src: "Connexion.webp",
+        text: `
+        <h4>Connexion</h4>
+        <p>Cette page permet à l'utilisateur de s'identifier permettant de gérer son suivi et de mettre une note aux mangas.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+        <li>CSS</li>
+        </ul>
+        <h5>Récapitulatif</h5>
+        <p>Deux inputs sont utilisés pour récupérer les informations de connexion de l'utilisateur. Un regex est employé pour vérifier que l'adresse e-mail utilisée est valide. Ensuite, les données sont envoyées à l'API qui renverra un jeton JWT si elles sont valides. Dans le cas contraire, elle renverra une erreur indiquant à l'utilisateur que les données saisies sont invalides.</p>
+        `
+    },
+    {
+        src: "Suivi.webp",
+        text: `
+        <h4>Suivi de lecture</h4>
+        <p>Cette page permet de voir les différents mangas ajoutés aux suivis.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+        <li>Javascript</li>
+        <li>Vue.js</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        </ul>
+        <h5>Récapitulatif</h5>
+        <p>En arrivant sur cette page, une requête est envoyée à l'API en utilisant le jeton JWT créé lors de la connexion pour identifier l'utilisateur. Ensuite, la liste des mangas ajoutés aux suivis de l'utilisateur est renvoyée et affichée pour celui-ci..</p>
+        `
+    },
+    {
+        src: "Suivi2.webp",
+        text: `
+        <h4>Informations suivi d'un manga</h4>
+        <p>Des informations supplémentaires sont disponibles pour le manga tel que l'état du suivi de celui-ci par l'utilisateur.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+        <li>Javascript</li>
+        <li>Vue.js</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        </ul>
+        <h5>Récapitulatif</h5>
+        <p>Si cette partie est accédée depuis la page de suivi des mangas, alors les données de la requête sont utilisées. Sinon, une nouvelle requête est effectuée afin de récupérer les informations de suivi de l'utilisateur pour le manga en questionp>
+        `
+    }
+]
+const backManga = [
+    {
+        src: "Backoffice.webp",
+        text: `
+        <h4>Interface administrateur</h4>
+        <p>Cette page permet à l'administrateur de voir les différents utilisateurs, les mangas et les catégories</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>PHP</li>
+            <li>Twig</li>
+            <li>Symfony</li>
+            <li>EasyAdmin</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Récapitulatif</h5>
+        <p>Le framework Symfony a été utilisé pour créer un back-end sécurisé et personnalisable. Le bundle EasyAdmin a été intégré pour faciliter la création d'une interface d'administration, permettant ainsi de visualiser et de modifier les informations de la base de données de manière simple et efficace.</p>
+        `
+    },
+    {
+        src: "Ajout.webp",
+        text: `
+        <h4>Modification de l'utilisateur</h4>
+        <p>En cliquant sur l'une des propriétés d'un des utilisateurs celle-ci peut être modifier.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>PHP</li>
+            <li>Twig</li>
+            <li>Symfony</li>
+            <li>EasyAdmin</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Récapitulatif</h5>
+        <p>Cette section permet à l'administrateur d'ajouter un manga à la base de données. Pour ce faire, il doit remplir plusieurs inputs avec les différentes informations demandées. Une fois que toutes les informations requises sont fournies et que l'administrateur valide, une requête est générée pour ajouter l'élément à la base de données.</p>
+        `
+    },
+    {
+        src: "Api.webp",
+        text: `
+        <h4>API back-end</h4>
+        <p>Les différentes requêtes provenant du front par l'utilisateur passent par cette API.</p>
+        <h5>Techno utilisées</h5>
+        <ul>
+            <li>PHP</li>
+            <li>Twig</li>
+            <li>Symfony</li>
+            <li>API Platform</li>
+            <li>CSS</li>
+        </ul>
+        <h5>Récapitulatif</h5>
+        <p>Le framework API Platform a été utilisé pour générer une API en se basant sur les entités de la base de données. Les routes disponibles ont été modifiées pour attendre certains types de données et renvoyer uniquement le minimum nécessaire.<br>
+        En fonction de l'adresse de la requête envoyée par l'utilisateur, différents types de données sont attendus. Si elles correspondent aux formats requis, elles sont acceptées et une action de récupération ou de modification des données est effectuée. Ensuite, une réponse est renvoyée côté front-end, contenant plus ou moins d'informations selon le résultat de la requête.</p>
+        `
+    }
+]
 
 function changeImgSrc(number) {
     const imgSelect = document.querySelector(".mainPic");
@@ -289,18 +441,28 @@ const clickedElement = document.querySelectorAll("#main-projectsDone article")
 clickedElement.forEach((element) => {
     element.addEventListener("click", event => {
         if (!blurElement) {
-            wider = false
+            wider = false;
+            large = false;
+            larger = false;
             let projectTargeted = element.className;
             if (projectTargeted == "projet1") {
                 imgSrc = minigames;
                 url = "assets/img/games/";
-                wider = true
+                wider = true;
             } else if (projectTargeted == "projet2") {
                 imgSrc = frontOffice;
                 url = "assets/img/front/";
-            } else {
+            } else if(projectTargeted == "projet3") {
                 imgSrc = BackOffice;
                 url = "assets/img/back/";
+            } else if(projectTargeted == "projet4"){
+                imgSrc = frontManga;
+                url = "assets/img/manga/";
+                large = true
+            } else {
+                imgSrc = backManga;
+                url = "assets/img/manga_back/";
+                larger = true
             }
             index = 0
             let newDiv = document.createElement("div");
@@ -329,6 +491,12 @@ clickedElement.forEach((element) => {
             blurElement = !blurElement;
             if (wider) {
                 document.querySelector(".mainPic").classList.add("wider");
+            }
+            if (large) {
+                document.querySelector(".mainPic").classList.add("large");
+            }
+            if (larger) {
+                document.querySelector(".mainPic").classList.add("larger");
             }
             if (url == "assets/img/back/") {
                 document.querySelector(".mainPic").classList.add("back")
